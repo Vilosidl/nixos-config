@@ -1,30 +1,20 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun";
+    modi:                       "drun";
     show-icons:                 true;
     display-drun:               "";
-	drun-display-format:        "{name}";
+    drun-display-format:        "{name}";
 }
 
 * {
-    font: "Jetbrains Mono 10";
-    background:     #1E1D2FFF;
-    background-alt: #282839FF;
-    foreground:     #D9E0EEFF;
-    selected:       #7AA2F7FF;
-    active:         #ABE9B3FF;
-    urgent:         #F28FADFF;
+    font: "JetBrains Mono 10";
+    background:     #24273a;   /* @base */
+    background-alt: #363a4f;   /* @surface0 */
+    foreground:     #cad3f5;   /* @text */
+    selected:       #eed49f;   /* @yellow */
+    active:         #a6da95;   /* @green */
+    urgent:         #ed8796;   /* @red */
 }
-/*****----- Main Window -----*****/
+
 window {
     transparency:                "real";
     location:                    center;
@@ -38,44 +28,34 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               10px;
-    border-color:                #d3c6aa;
+    border-radius:               12px;
+    border-color:                #eed49f; /* yellow */
     background-color:            @background;
     cursor:                      "default";
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0px;
     padding:                     10px;
-    border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
-    border-color:                @selected;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
     spacing:                     10px;
-    margin:                      0px;
-    padding:                     5px;
-    border:                      0px solid;
-    border-radius:               2px;
-    border-color:                @selected;
+    padding:                     6px;
+    border-radius:               6px;
     background-color:            @background-alt;
     text-color:                  @foreground;
     children:                    [ "prompt", "entry" ];
 }
 
 prompt {
-    enabled:                     true;
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
@@ -83,89 +63,75 @@ textbox-prompt-colon {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 entry {
-    enabled:                     true;
     background-color:            inherit;
     text-color:                  inherit;
-    cursor:                      text;
     placeholder:                 "Search...";
-    placeholder-color:           inherit;
+    placeholder-color:           @subtext0;
 }
 
-/*****----- Listview -----*****/
 listview {
-    enabled:                     true;
     columns:                     2;
     cycle:                       false;
     dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
-    reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
-    spacing:                     5px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
+    spacing:                     6px;
     background-color:            transparent;
     text-color:                  @foreground;
-    cursor:                      "default";
 }
+
 scrollbar {
-    handle-width:                5px ;
-    handle-color:                @selected;
-    border-radius:               0px;
+    handle-width:                5px;
+    handle-color:                @yellow;
     background-color:            @background-alt;
 }
 
-/*****----- Elements -----*****/
 element {
-    enabled:                     true;
-    spacing:                     10px;
-    margin:                      0px;
-    padding:                     5px;
-    border:                      0px solid;
-    border-radius:               12px;
-    border-color:                @selected;
+    spacing:                     8px;
+    padding:                     6px;
+    border-radius:               10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
+
 element normal.normal {
     background-color:            @background;
     text-color:                  @foreground;
 }
+
 element selected.normal {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @yellow;
+    text-color:                  @base;
 }
+
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        25px;
+    size:                        22px;
     cursor:                      inherit;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
-    highlight:                   inherit;
-    cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
 
-/*****----- Message -----*****/
 error-message {
-    padding:                     15px;
+    padding:                     12px;
     border:                      2px solid;
-    border-radius:               12px;
-    border-color:                @selected;
+    border-radius:               10px;
+    border-color:                @red;
     background-color:            @background;
     text-color:                  @foreground;
 }
+
 textbox {
     background-color:            @background;
     text-color:                  @foreground;
