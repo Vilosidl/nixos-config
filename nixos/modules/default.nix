@@ -1,0 +1,23 @@
+{
+  imports = [
+    ./nvidia.nix
+    ./bluetooth.nix
+    ./boot.nix
+    ./audio.nix
+    ./autologin.nix
+    ./fish.nix
+    ./gvfs.nix
+    ./hyprland.nix
+    ./nix.nix
+    ./nixpkgs.nix
+    ./nvidia.nix
+    ./polkit.nix
+    ./steam.nix
+    ./time.nix
+    ./fileSystems.nix
+    ./amnezia-vpn.nix
+    ./printers.nix
+    ./nix-ld.nix
+    ./udev.nix
+  ];
+}

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soundcard-usb"
+version = "1.0.0"
+description = "Daemon and client for USB soundcard control"
+requires-python = ">=3.7"
+dependencies = [
+    "pyusb",
+]
+
+[project.scripts]
+gpu-usb-daemon = "daemon:main"
+gpu-usb-client = "client:main"

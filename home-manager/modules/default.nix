@@ -1,0 +1,21 @@
+{
+  imports = [
+    ./hyprland
+    ./waybar
+    ./stylix.nix
+    ./fish.nix
+    ./alacritty.nix
+    ./desktopEntries.nix
+    ./nemo.nix
+    ./gpu-screen-recorder-ui.nix
+    ./wpaper.nix
+    ./discord.nix
+    ./rofi.nix
+    ./git.nix
+    ./fonts.nix
+    ./soundcard.nix
+    ./screenshots.nix
+    ./mako.nix
+    ./starship.nix
+    ];
+}

@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipewire-mute-source"
+version = "1.0.0"
+description = "Mute microphone"
+requires-python = ">=3.7"
+
+[project.scripts]
+gpu-usb-daemon = "daemon:main"

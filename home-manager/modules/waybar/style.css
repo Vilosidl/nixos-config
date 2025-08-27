@@ -1,0 +1,115 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, JetBrainsMono;
+    font-weight: bold;
+    font-size: 12.5px;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: @tr;
+}
+fcd
+#workspaces button label {
+	font-size: 12.5px;
+	padding-left: 1px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: @text;
+    margin-left: 3px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+#workspaces button.visible {
+    color: @subtext2;
+    background: @overlay0;
+}
+
+#workspaces button.active {
+    color: @subtext2;
+    background: @overlay2;
+}
+
+#workspaces button:hover {
+    background: @base;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#workspaces,
+#window,
+#temperature,
+#cpu,
+#memory,
+#wireplumber,
+#tray,
+#language,
+#clock,
+#cpu,
+#memory,
+#custom-gpu-usage,
+#custom-change-output,
+#custom-weather
+{
+    padding: 0 3px;
+    background-color: @mantle;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: 2px solid @overlay2;
+    border-radius: 10px;
+    color: @text;
+}
+
+#tray{
+    color: @text;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#custom-gpu-usage {
+    padding-right: 5px;
+}
+
+#custom-change-output {
+    padding-left: 10px;
+    padding-right: 11px;
+}
+
+window#waybar.empty #window {
+    background-color: @tr;
+	border-radius: 0;
+	border: 0 solid @tr;
+}
