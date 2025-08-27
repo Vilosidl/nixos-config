@@ -41,9 +41,6 @@ in
     filen-desktop
     onlyoffice-desktopeditors
     obsidian
-
-
-    lutris
     prismlauncher
 
     pulseaudio
