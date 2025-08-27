@@ -17,5 +17,6 @@
     ./screenshots.nix
     ./mako.nix
     ./starship.nix
+    ./librewolf.nix
     ];
 }
