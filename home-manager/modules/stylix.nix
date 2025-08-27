@@ -12,8 +12,8 @@
         neovim.enable = false;
         waybar.enable = false;
         rofi.enable = false;
-        hyprland.enable = true;
-        hyprpaper.enable = true;
+        hyprland.enable = false;
+        hyprpaper.enable = false;
       };
 
       cursor = {
