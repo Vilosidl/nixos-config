@@ -12,7 +12,7 @@
     "$obsidian" = "obsidian --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland";
     "$telegram" = "telegram-desktop";
     "$powerMenu" = "rofi-powermenu";
-    "$reloadwaybar" = "pkill waybar && waybar";
+    "$reloadwaybar" = "systemctl --user restart waybar.service";
     "$calculator" = "rofi -show calc";
     "$discord" = "discord";
     "$pipewireMute" = "pipewire-mute-source";
