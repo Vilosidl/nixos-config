@@ -1,5 +1,4 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, JetBrainsMono;
     font-weight: bold;
     font-size: 12.5px;
@@ -8,39 +7,44 @@
 }
 
 window#waybar {
-    background: @tr;
+    background: rgba(00,00,00,00);
+    color: @text;
 }
 
 #workspaces button label {
-	font-size: 12.5px;
-	padding-left: 1px;
+    font-size: 12.5px;
+    padding-left: 1px;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 6px;
     color: @text;
-    margin-left: 3px;
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
+    margin-left: 4px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
 }
 
 #workspaces button.visible {
-    color: @subtext2;
-    background: @overlay0;
+    color: @yellow;
+    background: @surface0;
 }
 
 #workspaces button.active {
-    color: @subtext2;
-    background: @overlay2;
+    color: @base;
+    background: @yellow;
 }
 
 #workspaces button:hover {
-    background: @base;
+    background: @yellow;
+    color: @base;
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    background-color: @yellow;
+    color: @base;
+    border-bottom: 3px solid @mauve;
 }
 
 #window,
@@ -48,18 +52,19 @@ window#waybar {
     margin: 0 4px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
+/* Remove left margin if workspaces is leftmost */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
+/* Remove right margin if workspaces is rightmost */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: @yellow;
+    color: @base;
 }
 
 #workspaces,
@@ -71,22 +76,19 @@ label:focus {
 #tray,
 #language,
 #clock,
-#cpu,
-#memory,
 #custom-gpu-usage,
 #custom-change-output,
-#custom-weather
-{
-    padding: 0 3px;
+#custom-weather {
+    padding: 0 6px;
     background-color: @mantle;
-    margin-left: 1px;
-    margin-right: 1px;
-    border: 2px solid @overlay2;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 2px solid @yellow;
     border-radius: 10px;
     color: @text;
 }
 
-#tray{
+#tray {
     color: @text;
 }
 
@@ -96,11 +98,12 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @red;
+    color: @base;
 }
 
 #custom-gpu-usage {
-    padding-right: 5px;
+    padding-right: 7px;
 }
 
 #custom-change-output {
@@ -109,7 +112,7 @@ label:focus {
 }
 
 window#waybar.empty #window {
-    background-color: @tr;
-	border-radius: 0;
-	border: 0 solid @tr;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
 }

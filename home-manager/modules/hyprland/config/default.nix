@@ -7,5 +7,6 @@
     ./hyprland.nix
     ./input.nix
     ./windowrules.nix
+    ./catppuccin.nix
   ];
 }
