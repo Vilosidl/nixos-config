@@ -19,5 +19,6 @@
     ./starship.nix
     ./librewolf.nix
     ./lutris.nix
+    ./catppuccin.nix
     ];
 }

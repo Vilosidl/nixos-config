@@ -1,6 +1,6 @@
 { pkgs, ... }: {
     home.packages = with pkgs; [
-      catppuccin-gtk
+#      catppuccin-gtk
       catppuccin-cursors
     ];
 

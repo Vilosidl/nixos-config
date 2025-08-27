@@ -1,5 +1,10 @@
 { lib, ... }:
 {
+  catppuccin.mako = {
+    enable = true;
+    accent = "yellow";
+    flavor = "macchiato";
+  };
   services.mako = {
     enable = true;
     settings = {
@@ -16,7 +21,7 @@
       default-timeout=2500;
       ignore-timeout=1;
       font=lib.mkForce "JetBrains Mono 14";
-      margin = "10, 160, 0,r 0";
+      margin = "10, 160, 0, 0";
     };
   };
 }
