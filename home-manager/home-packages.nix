@@ -27,6 +27,7 @@ in
     cloc
     libnotify
     usbutils
+    bat
 
     telegram-desktop
     imv
@@ -47,6 +48,5 @@ in
         ])
 
 ++  (with pkgs-unstable; [
-      librewolf
     ]);
 }
