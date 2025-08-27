@@ -48,6 +48,5 @@ in
 
 ++  (with pkgs-unstable; [
       librewolf
-      obs-studio
     ]);
 }
