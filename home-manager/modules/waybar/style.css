@@ -2,8 +2,6 @@
     font-family: FontAwesome, JetBrainsMono;
     font-weight: bold;
     font-size: 12.5px;
-    margin: 0;
-    padding: 0;
 }
 
 window#waybar {
@@ -73,7 +71,9 @@ label:focus {
 #cpu,
 #memory,
 #wireplumber,
+#pulseaudio,
 #tray,
+#tray menu,
 #language,
 #clock,
 #custom-gpu-usage,
@@ -100,6 +100,11 @@ label:focus {
     -gtk-icon-effect: highlight;
     background-color: @red;
     color: @base;
+}
+
+#tray menu {
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
 }
 
 #custom-gpu-usage {
