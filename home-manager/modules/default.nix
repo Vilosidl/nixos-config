@@ -20,5 +20,6 @@
     ./librewolf.nix
     ./lutris.nix
     ./catppuccin.nix
+    ./mpris-proxy.nix
     ];
 }
