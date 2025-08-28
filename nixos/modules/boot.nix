@@ -6,4 +6,5 @@
   boot.initrd.availableKernelModules = [
     "nvidia_drm" "nvidia_modeset" "nvidia" "nvidia_uvm"
   ];
+  boot.loader.timeout = 1;
 }
