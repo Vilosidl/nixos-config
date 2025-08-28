@@ -32,6 +32,8 @@
         "browser.safebrowsing.provider.google.updateURL" = "https://safebrowsing.google.com/safebrowsing/downloads?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2&key=%GOOGLE_SAFEBROWSING_API_KEY%";
 
         "network.http.referer.XOriginPolicy" = 2;
+
+        "places.history.enabled" = false;
       };
     };
 
