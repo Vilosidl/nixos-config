@@ -69,6 +69,7 @@
     };
     dorion = {
       sysTray = false;
+      theme = "dark";
       autoClearCache = true;
       disableHardwareAccel = false;
       desktopNotifications = true;
