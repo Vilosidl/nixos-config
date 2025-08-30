@@ -20,5 +20,6 @@
     ./nix-ld.nix
     ./udev.nix
     ./gnome-disks.nix
+    ./postgres.nix
   ];
 }
