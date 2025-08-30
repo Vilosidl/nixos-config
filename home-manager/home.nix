@@ -2,6 +2,7 @@
   imports = [
     ./modules
     ./home-packages.nix
+    ./modules/wlogout/default.nix
   ];
 
   home = {
