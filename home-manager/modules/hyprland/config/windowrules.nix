@@ -17,7 +17,6 @@
       "float, class:org.telegram.desktop"
       "size 300 800, class:org.telegram.desktop"
       "move 1400 43, class:org.telegram.desktop"
-      "fullscreen, title:^(Media viewer)"
 
       "float, class:imv"
 
@@ -43,8 +42,6 @@
 
       "workspace 3 silent, class:^(jetbrains-.*)$"
       "opacity 0.95, class:^(jetbrains-.*)$"
-
-      "size 1500 800, title:Image"
 
       "float, title:Disks"
 
