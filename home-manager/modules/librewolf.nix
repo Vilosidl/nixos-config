@@ -12,6 +12,7 @@
         packages = with pkgs.nur.repos; [
           rycee.firefox-addons.bitwarden
           rycee.firefox-addons.sponsorblock
+          rycee.firefox-addons.tampermonkey
         ];
       };
       settings = {
