@@ -33,12 +33,6 @@ let
   palette = lib.mapAttrs (_: mkLiteral) rawPalette;
   accentName = config.catppuccin.accent;
   accent = palette.${accentName};
-
-
-  rofi-adi1090x-themes = pkgs.callPackage ../../packages/rofi-themes/default.nix {};
-  rofi-scripts = pkgs.callPackage ../../packages/rofi-scripts/default.nix {
-    inherit rofi-adi1090x-themes;
-  };
 in
 {
   programs.rofi = {
@@ -46,7 +40,6 @@ in
       package = pkgs.rofi-wayland;
       theme = {
           "configuration" = {
-              modi = "drun";
               show-icons = true;
               display-drun = "";
               drun-display-format = "{name}";
@@ -185,10 +178,12 @@ in
              highlight = mkLiteral "none";
            };
       };
-      modes = ["drun"];
+      modes = [
+      "drun"
+      ];
     };
   home.packages = with pkgs; [
     rofi-wayland
-    rofi-scripts.rofi-powermenu
+    rofi-power-menu
   ];
 }
