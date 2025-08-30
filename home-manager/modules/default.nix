@@ -22,5 +22,6 @@
     ./mpris-proxy.nix
     ./wlogout
     ./easyeffects.nix
+    ./udiskie.nix
     ];
 }
