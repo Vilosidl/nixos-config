@@ -11,7 +11,7 @@
     "$screenshotOutput" = "hyprshot -m output -o ~/screenshot";
     "$obsidian" = "obsidian --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland";
     "$telegram" = "telegram-desktop";
-    "$powerMenu" = "rofi-powermenu";
+    "$powerMenu" = "wlogout -b 2";
     "$reloadwaybar" = "systemctl --user restart waybar.service";
     "$calculator" = "rofi -show calc";
     "$discord" = "discord";
