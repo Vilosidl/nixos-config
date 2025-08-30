@@ -12,7 +12,7 @@
         waybar.enable = false;
         rofi.enable = false;
         hyprland.enable = false;
-        hyprpaper.enable = false;
+        hyprpaper.enable = true;
       };
 
       cursor = {
