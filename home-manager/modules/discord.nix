@@ -6,8 +6,8 @@
 
   programs.nixcord = {
     enable = true;
-    discord.enable = false;
-    dorion.enable = true;
+    discord.enable = true;
+    dorion.enable = false;
     config = {
       frameless = true;
       plugins = {
