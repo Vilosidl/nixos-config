@@ -8,7 +8,6 @@
     ./desktopEntries.nix
     ./nemo.nix
     ./gpu-screen-recorder-ui.nix
-    ./wpaper.nix
     ./discord.nix
     ./rofi.nix
     ./git.nix
@@ -21,5 +20,7 @@
     ./lutris.nix
     ./catppuccin.nix
     ./mpris-proxy.nix
+    ./wlogout
+    ./easyeffects.nix
     ];
 }
