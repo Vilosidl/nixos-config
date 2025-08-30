@@ -6,6 +6,7 @@ let
   gpu-usage-waybar = pkgs.callPackage ../packages/gpu-usage-waybar/default.nix {};
   soundcard = pkgs.callPackage ../packages/soundcard/default.nix {};
   pipewire-mute-source = pkgs.callPackage ../packages/pipewire-mute-source/default.nix {};
+  wlogout-icons = pkgs.callPackage ../packages/wlogout-icons/default.nix {};
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -23,7 +24,6 @@ in
     soundcard
     libusb1
     pipewire-mute-source
-    wpaperd
     cloc
     libnotify
     usbutils
@@ -43,8 +43,11 @@ in
     onlyoffice-desktopeditors
     obsidian
     prismlauncher
+    filezilla
 
     pulseaudio
+
+    wlogout-icons
         ])
 
 ++  (with pkgs-unstable; [
