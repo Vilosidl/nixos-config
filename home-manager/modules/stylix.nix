@@ -13,6 +13,7 @@
         rofi.enable = false;
         hyprland.enable = false;
         hyprpaper.enable = true;
+        librewolf.profileNames = [ "myprofile" ] ;
       };
 
       cursor = {
