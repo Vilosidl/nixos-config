@@ -32,9 +32,6 @@
         "browser.safebrowsing.provider.google.gethashURL" = "https://safebrowsing.google.com/safebrowsing/gethash?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2";
         "browser.safebrowsing.provider.google.updateURL" = "https://safebrowsing.google.com/safebrowsing/downloads?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2&key=%GOOGLE_SAFEBROWSING_API_KEY%";
 
-        "browser.policies.runOncePerModification.setDefaultSearchEngine" = "StartPage";
-        "browser.newtabpage.activity-stream.trendingSearch.defaultSearchEngine" = "StartPage";
-
         "network.http.referer.XOriginPolicy" = 2;
 
         "places.history.enabled" = false;
