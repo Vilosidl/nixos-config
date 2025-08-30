@@ -3,10 +3,10 @@
 pkgs.stdenv.mkDerivation {
   pname = "wlogout-icons";
   version = "1.0";
-  src = builtins.path { path = ./.; };
+  src = ./source;
   dontUnpack = true;
   installPhase = ''
-    mkdir -p $out/icons
-    cp -r $src/source $out/icons
+    mkdir -p $out/
+    cp -r $src/* $out/
   '';
 }
