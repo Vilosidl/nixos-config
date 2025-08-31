@@ -184,6 +184,5 @@ in
     };
   home.packages = with pkgs; [
     rofi-wayland
-    rofi-power-menu
   ];
 }
