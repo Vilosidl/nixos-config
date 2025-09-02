@@ -28,6 +28,7 @@ in
     libnotify
     usbutils
     bat
+    cloudflared
 
     telegram-desktop
     imv
