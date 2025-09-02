@@ -35,6 +35,7 @@
       };
       modules = [
         ./configuration.nix
+        ./hardware-configuration.nix
         home-manager.nixosModules.home-manager
         stylix.nixosModules.stylix
         nur.modules.nixos.default
