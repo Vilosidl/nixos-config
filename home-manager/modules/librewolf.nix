@@ -24,6 +24,8 @@
         "privacy.clearOnShutdown.cookies" = true;
         "privacy.resistFingerprinting.letterboxing" = true;
 
+        "browser.toolbars.bookmarks.visibility" = "never";
+
         "browser.safebrowsing.malware.enabled" = true;
         "browser.safebrowsing.phishing.enabled" = true;
         "browser.safebrowsing.blockedURIs.enabled" = true;
