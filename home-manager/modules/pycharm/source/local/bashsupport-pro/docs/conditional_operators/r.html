@@ -1,0 +1,19 @@
+<html><body><h2>-r FILE (conditional operator)</h2>
+<p><code>true</code> if the file exists and is readable by you, i.e. the current user.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#Bash-Conditional-Expressions">Bash manual</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html#tag_20_128">POSIX specification of test</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Different ways to test if a file is readable:</dt>
+<dd>
+<pre><code class="language-bash">test -r ~/file &amp;&amp; echo &quot;readable&quot;
+[ -r ~/file ] &amp;&amp; echo &quot;readable&quot;
+# Bash
+[[ -r ~/file ]] &amp;&amp; echo &quot;readable&quot;
+</code></pre>
+</dd>
+</dl>
+</body></html>

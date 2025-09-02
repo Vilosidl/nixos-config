@@ -1,0 +1,23 @@
+<html><body><h2><code>${name:A}</code>: Absolute Path with resolved links</h2>
+<p>Interprets the variable value as a file path, turns it into an absolute path and resolves symbolic links.</p>
+<p>Use modifier <code>:a</code> if you would not like to resolve symbolic links.</p>
+<p>Use modifier <code>:P</code> to use <a href="https://man7.org/linux/man-pages/man3/realpath.3.html"><code>realpath</code></a> semantics.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#Modifiers">The Z Shell Manual on modifiers</a></li>
+<li><a href="https://man7.org/linux/man-pages/man3/realpath.3.html">The UNIX realpath function</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Convert a relative path into an absolute path with resolved links</dt>
+<dd>
+<pre><code class="language-zsh">cd /home/user/work
+relativePath=./my-dir/sub/../my-file.txt
+echo $relativePath:A
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">/home/user/work/my-dir/my_file_link_target.txt
+</code></pre>
+</dd>
+</dl>
+</body></html>

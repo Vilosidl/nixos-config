@@ -1,0 +1,25 @@
+<html><body><h2><code>${(D)…}</code>: Reverse filename expansion</h2>
+<p><code>(D)</code> assumes that the scalar or array variable contains file paths.
+It replaces the prefix of these paths with placeholders like <code>~</code> and escapes the remainder of the path.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#Filename-Expansion">Zsh manual on filename expansion</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Print shortened, escaped filepath</dt>
+<dd>
+<pre><code class="language-zsh">path=&quot;$HOME/temp/file with spaces.txt&quot;
+echo &quot;File path: ${(D)path}&quot;
+
+paths=(&quot;$HOME/file1.txt&quot; &quot;$HOME/file2.txt&quot;)
+echo &quot;File paths: &quot; ${(D)paths}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">File path: ~/temp/file\ with\ spaces.txt
+File paths:  ~/file1.txt ~/file2.txt
+</code></pre>
+</dd>
+</dl>
+</body></html>

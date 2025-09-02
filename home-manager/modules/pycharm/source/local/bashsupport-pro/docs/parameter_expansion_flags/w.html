@@ -1,0 +1,24 @@
+<html><body><h2><code>${(w)…}</code>: Word count</h2>
+<p><code>w</code> used together with <code>#name</code> counts words in arrays or string</p>
+<p>Flag <code>(s)</code> can be used to define the word delimiter.</p>
+<p><code>(W)</code> can be used instead if empty words should be counted, too.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Count words</dt>
+<dd>
+<pre><code class="language-zsh">string=&quot;string with several words&quot;
+array=(array &quot;with several&quot; words)
+echo ${(w)#string}
+echo ${(w)#array}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">4
+4
+</code></pre>
+</dd>
+</dl>
+</body></html>

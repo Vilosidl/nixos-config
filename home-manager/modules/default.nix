@@ -2,6 +2,8 @@
   imports = [
     ./hyprland
     ./waybar
+    ./pycharm
+    ./wlogout
     ./stylix.nix
     ./fish.nix
     ./alacritty.nix
@@ -20,7 +22,6 @@
     ./lutris.nix
     ./catppuccin.nix
     ./mpris-proxy.nix
-    ./wlogout
     ./easyeffects.nix
     ./udiskie.nix
     ];

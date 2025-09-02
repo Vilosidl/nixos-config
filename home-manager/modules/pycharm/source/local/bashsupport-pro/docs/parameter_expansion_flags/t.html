@@ -1,0 +1,36 @@
+<html><body><h2><code>${(t)…}</code>: Type of parameter</h2>
+<p><code>t</code> evaluates to a string describing the type of the parameter. Additional properties are separated by <code>-</code>.</p>
+<p>The first keyword describes the type:</p>
+<ul>
+<li>scalar</li>
+<li>array</li>
+<li>integer</li>
+<li>float</li>
+<li>association</li>
+</ul>
+<p>The following keywords describe additional properties of the parameter.
+Please refer to the manual for a complete list of possible values.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Print types of parameters</dt>
+<dd>
+<pre><code class="language-zsh">string=value
+declare -i int=42
+declare -F float_value=42.0
+declare -Argxu many=([10]=ten [42]=&quot;fourty two&quot;)
+echo ${(t)int}
+echo ${(t)float_value}
+echo ${(t)many}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">integer
+float
+association-upper-readonly-export
+</code></pre>
+</dd>
+</dl>
+</body></html>

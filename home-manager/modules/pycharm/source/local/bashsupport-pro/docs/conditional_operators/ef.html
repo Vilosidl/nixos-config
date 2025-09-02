@@ -1,0 +1,22 @@
+<html><body><h2>FILE -ef FILE (conditional operator)</h2>
+<p><code>true</code> if <code>file1</code> is a hard link to <code>file2</code>, i.e. if it refers to the same device and inode numbers.</p>
+<p><code>-ef</code> is not included in POSIX.
+Avoid it if you want to stay compatible with POSIX shells.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#Bash-Conditional-Expressions">Bash manual</a></li>
+<li><a href="https://tldp.org/LDP/abs/html/fto.html">Advanced Bash-Scripting Guide</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html#tag_20_128">POSIX specification of test</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Different ways to test if a file is a hard link to another file:</dt>
+<dd>
+<pre><code class="language-bash">test ~/file1.txt -ef ~/file2.txt &amp;&amp; echo &quot;hard link&quot;
+[ ~/file1.txt -ef ~/file2.txt ] &amp;&amp; echo &quot;hard link&quot;
+# Bash
+[[ ~/file1.txt -ef ~/file2.txt ]] &amp;&amp; echo &quot;hard link&quot;
+</code></pre>
+</dd>
+</dl>
+</body></html>

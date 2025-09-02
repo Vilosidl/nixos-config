@@ -1,0 +1,19 @@
+<html><body><h2><code>${(%)…}</code>: Expand as prompt</h2>
+<p>Expands all <code>%</code> escapes in the same way as in prompts. <code>%%</code> is enabling full prompt expansion.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Print username, TTY, and machine using prompt expansion</dt>
+<dd>
+<pre><code class="language-zsh">message='User &quot;%n&quot; on TTY &quot;%l&quot; on machine &quot;%M&quot;'
+echo ${(%)message}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">User &quot;UserName&quot; on TTY &quot;pts/1&quot; on machine &quot;MachineName&quot;
+</code></pre>
+</dd>
+</dl>
+</body></html>

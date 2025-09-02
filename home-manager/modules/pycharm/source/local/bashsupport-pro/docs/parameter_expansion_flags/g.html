@@ -1,0 +1,35 @@
+<html><body><h2><code>${(g:opts:)…}</code>: Process escape sequences</h2>
+<p>Without options, <code>${(g::)name}</code>, processes escapes like the <code>echo</code> builtin.</p>
+<p>Options <code>o</code>, <code>c</code>, and <code>e</code> enable processing of different forms of escape sequences.</p>
+<h3>Options</h3>
+<dl>
+<dt><code>o</code></dt>
+<dd>Octal escapes don&rsquo;t take a leading zero</dd>
+<dt><code>c</code></dt>
+<dd>Sequences like ^X are also processed</dd>
+<dt><code>e</code></dt>
+<dd>Sequences like <code>\M-t</code> are also processed</dd>
+</dl>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ANSI_escape_code#C0_control_codes">Wikipedia on caret escape codes</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Evaluate escape sequences</dt>
+<dd>
+<pre><code class="language-zsh"># \n and ^J and octal \12 are all &quot;newline&quot;
+# \t and ^I are both &quot;tab&quot;
+value='Name\tAge\n----\t---\12Adam^I42^JEve^I42'
+echo &quot;${(g:oc:)value}&quot;
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">Name    Age
+----    ---
+Adam    42
+Eve     42
+</code></pre>
+</dd>
+</dl>
+</body></html>

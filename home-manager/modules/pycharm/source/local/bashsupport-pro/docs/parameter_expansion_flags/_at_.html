@@ -1,0 +1,25 @@
+<html><body><h2><code>${(@)…}</code>: Array elements as separate words</h2>
+<p>In double quotes, array elements are put into separate words.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Expand array values into separate words</dt>
+<dd>
+<pre><code class="language-zsh">value=(one two three)
+# with the flag, each value is expanded into a word
+for f in &quot;${(@)value}&quot;; do echo &quot;with flag: $f&quot;; done
+# without the flag, it's expanded into just one word
+for f in &quot;${value}&quot;; do echo &quot;without flag: $f&quot;; done
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">with flag: one
+with flag: two
+with flag: three
+without flag: one two three
+</code></pre>
+</dd>
+</dl>
+</body></html>

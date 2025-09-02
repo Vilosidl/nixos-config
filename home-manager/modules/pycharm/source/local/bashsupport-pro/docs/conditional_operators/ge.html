@@ -1,0 +1,19 @@
+<html><body><h2>arg1 -ge arg2 (conditional operator)</h2>
+<p>Arithmetic comparison: <code>true</code> if integer <code>arg1</code> is greater than or equal to integer <code>arg2</code>.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#Bash-Conditional-Expressions">Bash manual</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html#tag_20_128">POSIX specification of test</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Different ways to compare two integers:</dt>
+<dd>
+<pre><code class="language-bash">test &quot;$n&quot; -ge 42 &amp;&amp; echo &quot;$n &gt;= 42&quot;
+[ &quot;$n&quot; -ge 42 ] &amp;&amp; echo &quot;$n &gt;= 42&quot;
+# Bash
+[[ &quot;$n&quot; -ge 42 ]] &amp;&amp; echo &quot;$n &gt;= 42&quot;
+</code></pre>
+</dd>
+</dl>
+</body></html>

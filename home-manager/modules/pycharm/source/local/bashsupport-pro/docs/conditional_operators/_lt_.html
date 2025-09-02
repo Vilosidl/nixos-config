@@ -1,0 +1,24 @@
+<html><body><h2>STRING1 &lt; STRING2 (conditional operator)</h2>
+<p><code>true</code> if <code>string1</code> sorts before <code>string2</code> lexicographically.</p>
+<p><code>&lt;</code> is not included in POSIX.
+Avoid it if you want to stay compatible with POSIX shells.</p>
+<p>Integers are compared with <code>-lt</code>.</p>
+<h3>Bash</h3>
+<p>This operator uses the current locale for sorting within a <code>[[ ... ]]</code> construct.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#Bash-Conditional-Expressions">Bash manual</a></li>
+<li><a href="https://tldp.org/LDP/abs/html/comparison-ops.html#LTREF">Advanced Bash-Scripting Guide</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Different ways to test if a string is sorted before another one:</dt>
+<dd>
+<pre><code class="language-bash">test &quot;$input&quot; &lt; &quot; &quot; &amp;&amp; echo &quot;special char&quot;
+[ &quot;$input&quot; &lt; &quot; &quot; ] &amp;&amp; echo &quot;special char&quot;
+# Bash
+[[ &quot;$input&quot; &lt; &quot; &quot; ]] &amp;&amp; echo &quot;special char&quot;
+</code></pre>
+</dd>
+</dl>
+</body></html>

@@ -1,0 +1,22 @@
+<html><body><h2>-o OPTION (conditional operator)</h2>
+<p><code>true</code> if the shell option <code>OPTION</code> is enabled.</p>
+<p><code>-o</code> is not included in <a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html">POSIX.1-2017</a>.</p>
+<p><code>-o</code> is not to be confused with the <code>-o</code> OR operator as in <code>[ a -o b ]</code>, e.g. <code>[ -o xtrace -o -o monitor ] &amp;&amp; echo xtrace or monitor option enabled</code>.
+This OR operator is not well-defined, the better alternative in Bash is <code>[[ a &amp;&amp; b ]]</code>. Some, but not all POSIX shells implement the <code>-o</code> OR operator.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#Bash-Conditional-Expressions">Bash manual</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html#tag_20_128">POSIX specification of test</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Different ways to test if a shell option is enabled:</dt>
+<dd>
+<pre><code class="language-bash">test -o xtrace &amp;&amp; echo &quot;xtrace enable&quot;
+[ -o xtrace ] &amp;&amp; echo &quot;xtrace enabled&quot;
+# Bash
+[[ -o xtrace ]] &amp;&amp; echo &quot;xtrace enabled&quot;
+</code></pre>
+</dd>
+</dl>
+</body></html>

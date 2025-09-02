@@ -1,0 +1,20 @@
+<html><body><h2><code>${(o)…}</code>: Sort in ascending order</h2>
+<p><code>(o)</code> sorts in ascending order. It&rsquo;s the default sort order of flags <code>a</code>, <code>i</code>, <code>n</code>, and <code>-</code>.</p>
+<p><code>O</code> is the opposite and sets descending sort order.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Lexical, case-sensitive sorting in ascending order</dt>
+<dd>
+<pre><code class="language-zsh">declare data=(z X A a)
+echo &quot;Sorted with default settings: &quot; ${(o)data}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">Sorted with default settings:  a A X z
+</code></pre>
+</dd>
+</dl>
+</body></html>

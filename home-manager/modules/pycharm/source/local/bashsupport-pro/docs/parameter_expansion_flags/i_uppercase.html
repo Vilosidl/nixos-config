@@ -1,0 +1,19 @@
+<html><body><h2><code>${(I:expression:)…}</code>: Pattern match selector</h2>
+<p><code>(I:expression:)</code> is only useful with parameter expansion operators <code>${.../...}</code>, <code>${(S)...#...}</code>, <code>${(S)...%...}</code>.
+Expression is a arithmetic expression to define the first match, where the pattern matching or string replacement should start.</p>
+<dl>
+<dt><code>${(I:expression:).../...}</code></dt>
+<dt><code>${I:expression:...//...}</code></dt>
+<dd>Defines the starting position of the replacement.</dd>
+<dt><code>${(SI:expression:)...#...}</code></dt>
+<dt><code>${(SI:expression:)...##...}</code></dt>
+<dd>Match counted from the start of the string.</dd>
+<dt><code>${(SI:expression:)...%...}</code></dt>
+<dt><code>${(SI:expression:)...%%...}</code></dt>
+<dd>Match counted from the end of the string.</dd>
+</dl>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+</body></html>

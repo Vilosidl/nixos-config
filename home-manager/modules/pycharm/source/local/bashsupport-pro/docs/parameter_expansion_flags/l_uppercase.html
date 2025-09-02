@@ -1,0 +1,20 @@
+<html><body><h2><code>${(L)…}</code>: Convert to lowercase</h2>
+<p><code>(L)</code> converts all letters of the result to lowercase.</p>
+<p><code>(U)</code> is the opposite and converts to uppercase.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Convert array values to lowercase</dt>
+<dd>
+<pre><code class="language-zsh">declare data=(JOE WILLIAM JACK AVERELL)
+echo &quot;Dalton brothers: ${(L)data}&quot;
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">Dalton brothers: joe william jack averell
+</code></pre>
+</dd>
+</dl>
+</body></html>

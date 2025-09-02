@@ -1,0 +1,20 @@
+<html><body><h2><code>${name:r}</code>: Remove file extension</h2>
+<p>Removes the file extension from a file path.
+This is the opposite of <code>:e</code>, which evaluates to the file extension.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#Modifiers">The Z Shell Manual on modifiers</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Print path without file extension</dt>
+<dd>
+<pre><code class="language-zsh">path=&quot;/dir/subdir/file.csv&quot;
+echo $path:r
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">/dir/subdir/file
+</code></pre>
+</dd>
+</dl>
+</body></html>

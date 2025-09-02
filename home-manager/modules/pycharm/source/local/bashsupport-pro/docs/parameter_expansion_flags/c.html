@@ -1,0 +1,19 @@
+<html><body><h2><code>${(c)…}</code>: Number of characters in array</h2>
+<p><code>${(c)#array}</code> counts the characters in an array as if the elements were joined with a space.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Print characters of joined array</dt>
+<dd>
+<pre><code class="language-zsh">values=(a b c)
+echo ${(c)#values}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">5
+</code></pre>
+</dd>
+</dl>
+</body></html>

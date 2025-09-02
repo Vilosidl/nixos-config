@@ -1,0 +1,20 @@
+<html><body><h2><code>${(C)…}</code>: Capitalize resulting words</h2>
+<p>Capitalize the words, which are separated by non-alphanumeric characters.</p>
+<p>Please note that this flags splitting is different to the usual field splitting of Zsh.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Capitalize words</dt>
+<dd>
+<pre><code class="language-zsh">value=&quot;this is a multi-word example&quot;
+echo ${(C)value}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">This Is A Multi-Word Example
+</code></pre>
+</dd>
+</dl>
+</body></html>

@@ -1,0 +1,21 @@
+<html><body><h2><code>${(-)…}</code>: Sort numerically</h2>
+<p><code>(-)</code> sorts decimal integers numerically and supports a leading minus sign for negative numbers.</p>
+<p>By using <code>(n)</code> instead, only positive integers are sorted correctly.</p>
+<p>With an additional <code>(O)</code>, the sort order is reversed: <code>${(-O)name}</code>.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Sort integers</dt>
+<dd>
+<pre><code class="language-zsh">declare data=(100 -1 2 3 -10)
+echo &quot;Sorting positive and negative integers: &quot; ${(-)data}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">Sorting positive and negative integers:  -10 -1 2 3 100
+</code></pre>
+</dd>
+</dl>
+</body></html>

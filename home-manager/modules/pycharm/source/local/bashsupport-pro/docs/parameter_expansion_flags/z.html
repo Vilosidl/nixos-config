@@ -1,0 +1,29 @@
+<html><body><h2><code>${(z)…}</code>: Splitting with shell parsing</h2>
+<p><code>z</code> splits the expansion into words using shell parsing, i.e. as if the expansion was entered as a command.</p>
+<p>The splitting is performed after other flags are applied. Use nesting to work with the resulting words of <code>(z)</code>.</p>
+<p><code># comment</code> words are treated as ordinary strings and not as comments.<br />
+Option <code>(Z:opts:)</code> allows to configure this.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Split string using shell parsing</dt>
+<dd>
+<pre><code class="language-zsh">string=&quot;a value with 'single-quoted text' and \&quot;double-quoted\&quot; text\ content&quot;
+# split using shell parsing, then join with newline
+echo ${(j:\n:)${(z)string}}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">a
+value
+with
+'single-quoted text'
+and
+&quot;double-quoted&quot;
+text\ content
+</code></pre>
+</dd>
+</dl>
+</body></html>

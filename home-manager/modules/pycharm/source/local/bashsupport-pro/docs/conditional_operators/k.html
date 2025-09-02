@@ -1,0 +1,34 @@
+<html><body><h2>-k FILE (conditional operator)</h2>
+<p><code>true</code> if the file or directory exists and has its <code>sticky</code> bit set.</p>
+<p><code>-k</code> is not included in POSIX.1-2017, but is provided by some implementations.</p>
+<p>Quoting from <code>man chmod</code>:</p>
+<blockquote>
+<p>The restricted deletion flag or sticky bit is a single bit, whose interpretation depends on the file type. For
+directories, it prevents unprivileged users from removing or renaming a file
+in the directory unless they own the file or the directory; this is called the restricted deletion flag for the
+directory, and is commonly found on world-writable directories like /tmp.</p>
+<p>For regular files on some older systems, the bit saves the program&rsquo;s text image on the swap device so it will load
+more quickly when run; this is called the sticky bit.</p>
+</blockquote>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Conditional-Expressions.html#Bash-Conditional-Expressions">Bash manual</a></li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html#tag_20_128">POSIX specification of test</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Different ways to test if the sticky bit of a file is set:</dt>
+<dd>
+<pre><code class="language-bash">test -k ~/file.txt &amp;&amp; echo &quot;sticky bit set&quot;
+[ -k ~/file.txt ] &amp;&amp; echo &quot;sticky bit set&quot;
+# Bash
+[[ -k ~/file.txt ]] &amp;&amp; echo &quot;sticky bit set&quot;
+</code></pre>
+</dd>
+<dt>Set the sticky bit for a file</dt>
+<dd>
+<pre><code class="language-bash">chmod u+t ~/file.txt
+</code></pre>
+</dd>
+</dl>
+</body></html>

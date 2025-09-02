@@ -1,0 +1,21 @@
+<html><body><h2><code>${(O)…}</code>: Sort in descending order</h2>
+<p><code>(O)</code> sorts in descending, lexical order.
+Combined with <code>a</code>, <code>i</code>, <code>n</code>, or <code>-</code> it reverses the sort order of the result.</p>
+<p><code>o</code> is the opposite and sets ascending sort order.</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://zsh.sourceforge.io/Doc/Release/Expansion.html#index-parameter-expansion-flags">Zsh manual on parameter expansion flags</a></li>
+</ul>
+<h3>Examples</h3>
+<dl>
+<dt>Lexical, case-sensitive sorting in ascending order</dt>
+<dd>
+<pre><code class="language-zsh">declare data=(z X A a)
+echo &quot;Sorted in descending order: &quot; ${(O)data}
+</code></pre>
+<strong>Output:</strong>
+<pre><code class="language-text">Sorted in descending order:  z X A a
+</code></pre>
+</dd>
+</dl>
+</body></html>
