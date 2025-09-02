@@ -3,7 +3,7 @@ let
   iconsPath = pkgs.callPackage ../../../packages/wlogout-icons/default.nix {};
 in {
   home.file = {
-    ".config/wlogout/layout" = {
+    ".source/wlogout/layout" = {
       source = ./layout;
       recursive = true;
     };
