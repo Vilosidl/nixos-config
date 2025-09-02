@@ -14,12 +14,13 @@
     ./polkit.nix
     ./steam.nix
     ./time.nix
-    ./fileSystems.nix
     ./amnezia-vpn.nix
     ./printers.nix
     ./nix-ld.nix
     ./udev.nix
     ./gnome-disks.nix
     ./postgres.nix
+    ./kernel.nix
+    ./nh.nix
   ];
 }
