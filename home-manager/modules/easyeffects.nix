@@ -1,6 +1,6 @@
 {
   services.easyeffects = {
-    enable = true;
+    enable = false;
     extraPresets = {
       my-preset = {
         output = {
