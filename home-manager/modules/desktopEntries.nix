@@ -41,13 +41,6 @@
       noDisplay = true;
     };
 
-    "org.gnome.FileRoller" = {
-      name = "File-Roller";
-      exec = "file-roller";
-      icon = "org.gnome.FileRoller";
-      noDisplay = true;
-    };
-
     "cups" = {
       name = "cups";
       noDisplay = true;
@@ -72,5 +65,5 @@
       name = "uuctl";
       noDisplay = true;
     };
- };
+  };
 }
