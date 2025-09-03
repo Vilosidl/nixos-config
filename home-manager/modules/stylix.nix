@@ -8,10 +8,10 @@
       polarity = "dark";
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
       targets = {
-        neovim.enable = true;
-        waybar.enable = true;
+        neovim.enable = false;
+        waybar.enable = false;
         rofi.enable = false;
-        hyprland.enable = true;
+        hyprland.enable = false;
         hyprpaper.enable = true;
         librewolf.profileNames = [ "myprofile" ] ;
       };
