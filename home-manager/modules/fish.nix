@@ -15,7 +15,7 @@
       set fish_greeting
     '';
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake $HOME/nixos/";
+      rebuild = "nh os switch /home/dovi/nixos";
       update = "sudo nix-channel --update";
     };
     plugins = [
