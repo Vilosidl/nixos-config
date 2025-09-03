@@ -12,7 +12,6 @@
     ./nixpkgs.nix
     ./nvidia.nix
     ./polkit.nix
-    ./steam.nix
     ./time.nix
     ./amnezia-vpn.nix
     ./printers.nix

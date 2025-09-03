@@ -1,4 +1,4 @@
-{ nixcord, pkgs, ...}:
+{ lib, nixcord, pkgs, isInstalled, ...}:
 {
   imports = [
     nixcord.homeModules.nixcord
