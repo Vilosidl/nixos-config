@@ -17,6 +17,7 @@
     shellAliases = {
       rebuild = "nh os switch /home/dovi/nixos";
       update = "sudo nix-channel --update";
+      rm = "rmt";
     };
     plugins = [
       {
