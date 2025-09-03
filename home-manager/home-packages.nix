@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, pkgs-unstable, isInstalled, lib, ... }:
 let
   pycharm-professional-patched = pkgs.callPackage ../packages/pycharm-professional-patched/default.nix {};
 
@@ -29,6 +29,8 @@ in
     usbutils
     bat
     cloudflared
+    home-manager
+    hyprprop
 
     telegram-desktop
     imv
@@ -36,7 +38,6 @@ in
     file-roller
     pavucontrol
     easyeffects
-    pycharm-professional-patched
     qbittorrent
     shotcut
     blueman
@@ -49,6 +50,8 @@ in
     pulseaudio
 
     wlogout-icons
+    pycharm-professional-patched
+#    (lib.mkIf isInstalled pycharm-professional-patched)
         ])
 
 ++  (with pkgs-unstable; [
