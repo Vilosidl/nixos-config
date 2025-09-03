@@ -7,6 +7,7 @@ let
   soundcard = pkgs.callPackage ../packages/soundcard/default.nix {};
   pipewire-mute-source = pkgs.callPackage ../packages/pipewire-mute-source/default.nix {};
   wlogout-icons = pkgs.callPackage ../packages/wlogout-icons/default.nix {};
+  rmt = pkgs.callPackage ../packages/rmt/default.nix {};
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -31,6 +32,7 @@ in
     cloudflared
     home-manager
     hyprprop
+    rmt
 
     telegram-desktop
     imv
