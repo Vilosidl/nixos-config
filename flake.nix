@@ -1,6 +1,4 @@
 {
-  description = "Home Manager configuration of Jane Doe";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -20,12 +18,20 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    disko = {
+      url = "github:nix-community/disko";
+    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, stylix, nixcord, nur, catppuccin, ... }@inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, stylix, nixcord, nur, catppuccin, nixvim, disko, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+    isInstalled = builtins.pathExists "/run/current-system";
   in {
     nixosConfigurations.dovi = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -37,9 +43,7 @@
         ./configuration.nix
         ./hardware-configuration.nix
         home-manager.nixosModules.home-manager
-        stylix.nixosModules.stylix
-        nur.modules.nixos.default
-        home-manager.nixosModules.home-manager
+        disko.nixosModules.disko
         ({ pkgs, ... }: {
           users.defaultUserShell = pkgs.fish;
           users.users.dovi = {
@@ -47,7 +51,7 @@
             extraGroups = [ "wheel" "networkmanager" "audio" "plugdev" ];
             linger = true;
           };
-          home-manager.extraSpecialArgs = { inherit stylix pkgs-unstable nixcord; };
+          home-manager.extraSpecialArgs = { inherit stylix pkgs-unstable nixcord isInstalled; };
           home-manager.backupFileExtension = "backup";
           home-manager.users.dovi = {
             imports = [
@@ -55,6 +59,7 @@
               stylix.homeModules.stylix
               nur.modules.homeManager.default
               catppuccin.homeModules.catppuccin
+              nixvim.homeModules.nixvim
             ];
           };
         })
@@ -62,3 +67,4 @@
     };
   };
 }
+
