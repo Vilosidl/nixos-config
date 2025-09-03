@@ -138,21 +138,21 @@ in
              cursor = mkLiteral "pointer";
            };
 
-#           "element normal.normal" = {
-#             background-color = mkLiteral "@background";
-#             text-color = mkLiteral "@foreground";
-#           };
+           "element normal.normal" = {
+             background-color = mkLiteral "@background";
+             text-color = mkLiteral "@foreground";
+           };
 
-#           "element selected.normal" = {
-#             background-color = accent;
-#             text-color = palette.base;
-#           };
+           "element selected.normal" = {
+             background-color = accent;
+             text-color = palette.base;
+           };
 
-#           "element-icon" = {
-#             background-color = mkLiteral "transparent";
-#             text-color = mkLiteral "inherit";
-#             size = mkLiteral "22px";
-#           };
+           "element-icon" = {
+             background-color = mkLiteral "transparent";
+             text-color = mkLiteral "inherit";
+             size = mkLiteral "22px";
+           };
 
            "element-text" = {
              background-color = mkLiteral "transparent";
