@@ -15,7 +15,7 @@
       "size 1280 720, class:org.qbittorrent.qBittorrent"
 
       "float, class:org.telegram.desktop"
-      "size 300 800, class:org.telegram.desktop"
+      "size 300 850, class:org.telegram.desktop"
       "move 1400 43, class:org.telegram.desktop"
 
       "float, class:imv"
