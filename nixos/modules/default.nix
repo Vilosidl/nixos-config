@@ -21,5 +21,7 @@
     ./postgres.nix
     ./kernel.nix
     ./nh.nix
+    ./mount.nix
+    ./steam.nix
   ];
 }
