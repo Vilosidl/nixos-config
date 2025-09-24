@@ -7,6 +7,8 @@
       sensitivity = 0;
       force_no_accel = false;
       mouse_refocus = false;
+      repeat_rate = 20;
+      repeat_delay = 200;
 
       touchpad = {
         natural_scroll = false;
