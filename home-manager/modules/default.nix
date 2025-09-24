@@ -2,7 +2,6 @@
   imports = [
     ./hyprland
     ./waybar
-#    ./pycharm
     ./wlogout
     ./stylix.nix
     ./fish.nix
@@ -19,10 +18,11 @@
     ./mako.nix
     ./starship.nix
     ./librewolf.nix
-    ./catppuccin.nix
     ./mpris-proxy.nix
     ./easyeffects.nix
     ./udiskie.nix
     ./nixvim.nix
+    ./playerctl.nix
+    ./lutris.nix
     ];
 }
