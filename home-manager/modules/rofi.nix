@@ -1,38 +1,26 @@
 { pkgs, lib, config, ... }:
 let
   rawPalette = {
-    rosewater = "#f4dbd6";
-    flamingo  = "#f0c6c6";
-    pink      = "#f5bde6";
-    mauve     = "#c6a0f6";
-    red       = "#ed8796";
-    maroon    = "#ee99a0";
-    peach     = "#f5a97f";
-    yellow    = "#eed49f";
-    green     = "#a6da95";
-    teal      = "#8bd5ca";
-    sky       = "#91d7e3";
-    sapphire  = "#7dc4e4";
-    blue      = "#8aadf4";
-    lavender  = "#b7bdf8";
-    text      = "#cad3f5";
-    subtext1  = "#b8c0e0";
-    subtext0  = "#a5adcb";
-    overlay2  = "#939ab7";
-    overlay1  = "#8087a2";
-    overlay0  = "#6e738d";
-    surface2  = "#5b6078";
-    surface1  = "#494d64";
-    surface0  = "#363a4f";
-    base      = "#24273a";
-    mantle    = "#1e2030";
-    crust     = "#181926";
+    base06 = "#f4dbd6";
+    base0E = "#c6a0f6";
+    base08 = "#ed8796";
+    base09 = "#f5a97f";
+    base0A = "#eed49f";
+    base0B = "#a6da95";
+    base0C = "#8bd5ca";
+    base0D = "#8aadf4";
+    base07 = "#b7bdf8";
+    base05 = "#cad3f5";
+    base0F = "#a5adcb";
+    base04 = "#5b6078";
+    base03 = "#494d64";
+    base02 = "#363a4f";
+    base00 = "#24273a";
+    base01 = "#1e2030";
   };
 
   inherit (config.lib.formats.rasi) mkLiteral;
   palette = lib.mapAttrs (_: mkLiteral) rawPalette;
-  accentName = config.catppuccin.accent;
-  accent = palette.${accentName};
 in
 {
   programs.rofi = {
@@ -47,12 +35,12 @@ in
 
            "*" = {
              font = "JetBrains Mono 10";
-             background = palette.base;
-             background-alt = palette.surface0;
-             foreground = palette.text;
-             selected = accent;
-             active = palette.green;
-             urgent = palette.red;
+             background = palette.base00;
+             background-alt = palette.base02;
+             foreground = palette.base05;
+             selected = palette.base0D;
+             active = palette.base0B;
+             urgent = palette.base08;
            };
 
            "window" = {
@@ -68,7 +56,7 @@ in
              padding = mkLiteral "0px";
              border = mkLiteral "2px solid";
              border-radius = mkLiteral "12px";
-             border-color = accent;
+             border-color = palette.base0A;
              background-color = mkLiteral "@background";
              cursor = mkLiteral "default";
            };
@@ -107,7 +95,7 @@ in
              background-color = mkLiteral "inherit";
              text-color = mkLiteral "inherit";
              placeholder = "Search...";
-             placeholder-color = palette.subtext0;
+             placeholder-color = palette.base0F;
            };
 
            "listview" = {
@@ -125,7 +113,7 @@ in
 
            "scrollbar" = {
              handle-width = mkLiteral "5px";
-             handle-color = accent;
+             handle-color = palette.base0D;
              background-color = mkLiteral "@background-alt";
            };
 
@@ -144,8 +132,8 @@ in
            };
 
            "element selected.normal" = {
-             background-color = accent;
-             text-color = palette.base;
+             background-color = palette.base0A;
+             text-color = palette.base00;
            };
 
            "element-icon" = {
@@ -165,7 +153,7 @@ in
              padding = mkLiteral "12px";
              border = mkLiteral "2px solid";
              border-radius = mkLiteral "10px";
-             border-color = palette.red;
+             border-color = palette.base08;
              background-color = mkLiteral "@background";
              text-color = mkLiteral "@foreground";
            };
