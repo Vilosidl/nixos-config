@@ -1,10 +1,5 @@
 { lib, ... }:
 {
-  catppuccin.mako = {
-    enable = true;
-    accent = "yellow";
-    flavor = "macchiato";
-  };
   services.mako = {
     enable = true;
     settings = {
