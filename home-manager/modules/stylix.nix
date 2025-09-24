@@ -9,11 +9,18 @@
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
       targets = {
         neovim.enable = false;
+        gtk.enable = true;
         waybar.enable = false;
         rofi.enable = false;
-        hyprland.enable = false;
+        hyprland.enable = true;
         hyprpaper.enable = true;
-        librewolf.profileNames = [ "myprofile" ] ;
+        librewolf.profileNames = [ "myprofile" ];
+        starship.enable = true;
+        librewolf.enable = true;
+      };
+
+      override = {
+       base0D = "#eed49f"; #Accent
       };
 
       cursor = {
