@@ -1,5 +1,0 @@
-{
-  catppuccin.hyprland = {
-    enable = true;
-  };
-}

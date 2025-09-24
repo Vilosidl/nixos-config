@@ -1,2 +1,0 @@
-The programs in this directory test for a zshdb-compatible version of
-zsh. Run is-dbg-ok to do the check.

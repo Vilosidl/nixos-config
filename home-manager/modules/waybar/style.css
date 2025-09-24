@@ -16,7 +16,7 @@ window#waybar {
 
 #workspaces button {
     padding: 0 6px;
-    color: @text;
+    color: @base05;
     margin-left: 4px;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -25,24 +25,24 @@ window#waybar {
 }
 
 #workspaces button.visible {
-    color: @yellow;
-    background: @surface0;
+    color: @base0D;
+    background: @base02;
 }
 
 #workspaces button.active {
-    color: @base;
-    background: @yellow;
+    color: @base00;
+    background: @base0D;
 }
 
 #workspaces button:hover {
-    background: @yellow;
-    color: @base;
+    background: @base0D;
+    color: @bas00;
 }
 
 #mode {
-    background-color: @yellow;
-    color: @base;
-    border-bottom: 3px solid @mauve;
+    background-color: @base0D;
+    color: @base00;
+    border-bottom: 3px solid @base0E;
 }
 
 #window,
@@ -61,8 +61,8 @@ window#waybar {
 }
 
 label:focus {
-    background-color: @yellow;
-    color: @base;
+    background-color: @base0D;
+    color: @base00;
 }
 
 #workspaces,
@@ -80,16 +80,16 @@ label:focus {
 #custom-change-output,
 #custom-weather {
     padding: 0 6px;
-    background-color: @mantle;
+    background-color: @base01;
     margin-left: 3px;
     margin-right: 3px;
-    border: 2px solid @yellow;
+    border: 2px solid @base0D;
     border-radius: 10px;
-    color: @text;
+    color: @base05;
 }
 
 #tray {
-    color: @text;
+    color: @base05;
 }
 
 #tray > .passive {
@@ -98,8 +98,8 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @red;
-    color: @base;
+    background-color: @base08;
+    color: @base00;
 }
 
 #tray menu {
