@@ -1,7 +1,6 @@
-{ pkgs, pkgs-unstable, isInstalled, lib, ... }:
+{ pkgs, pkgs-unstable, isInstalled, lib, config, ... }:
 let
   pycharm-professional-patched = pkgs.callPackage ../packages/pycharm-professional-patched/default.nix {};
-
   weather = pkgs.callPackage ../packages/weather/default.nix {};
   gpu-usage-waybar = pkgs.callPackage ../packages/gpu-usage-waybar/default.nix {};
   soundcard = pkgs.callPackage ../packages/soundcard/default.nix {};
@@ -39,7 +38,6 @@ in
     vlc
     file-roller
     pavucontrol
-    easyeffects
     qbittorrent
     shotcut
     blueman
