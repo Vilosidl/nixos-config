@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-   catppuccin.librewolf.profiles.myprofile = {
-     enable = true;
-   };
-
   programs.librewolf = {
     enable = true;
     profiles.myprofile = {
